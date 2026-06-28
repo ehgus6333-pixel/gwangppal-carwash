@@ -261,7 +261,9 @@
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   .form-submit { margin-top: 12px; }
   .form-submit .btn { width: 100%; font-size: 18px; padding: 20px; }
-  .form-alt { margin-top: 22px; text-align: center; color: var(--muted); font-size: 14px; }
+  .form-status { margin-top: 16px; text-align: center; font-size: 14.5px; font-weight: 700; min-height: 1px; }
+  .form-status.err { color: #dc2626; }
+  .form-alt { margin-top: 18px; text-align: center; color: var(--muted); font-size: 14px; }
   .form-alt a { color: var(--blue); text-decoration: none; font-weight: 700; }
   .form-success { display: none; text-align: center; padding: 30px 10px; }
   .form-success.show { display: block; }
@@ -496,8 +498,9 @@
           <input type="text" name="region" placeholder="예) 서울 강남구 역삼동" required />
         </div>
         <div class="field form-submit">
-          <button type="submit" class="btn btn-primary">단 90분, 프리미엄 출장 세차 예약하기 ➔</button>
+          <button type="submit" class="btn btn-primary" id="reserveSubmit">단 90분, 프리미엄 출장 세차 예약하기 ➔</button>
         </div>
+        <p class="form-status" id="reserveStatus" role="alert"></p>
         <p class="form-alt">전화 예약을 원하시면 <a href="tel:01000000000">📞 010-0000-0000</a> 으로 연락 주세요.</p>
       </form>
       <div class="form-success" id="formSuccess">
@@ -538,19 +541,6 @@
     });
   });
 
-  // 예약 폼 제출
-  var form = document.getElementById('reserveForm');
-  var success = document.getElementById('formSuccess');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var data = Object.fromEntries(new FormData(form).entries());
-    // TODO: 실제 운영 시 아래에 Supabase/이메일/카카오 알림 연동 코드를 추가하세요.
-    console.log('예약 신청:', data);
-    form.style.display = 'none';
-    success.classList.add('show');
-    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
-
   // 모바일 플로팅 CTA: 히어로를 지나면 노출
   var floatCta = document.getElementById('floatCta');
   var hero = document.getElementById('top');
@@ -564,6 +554,58 @@
     } else {
       floatCta.classList.remove('show');
     }
+  });
+</script>
+
+<!-- ===== Supabase 예약 폼 연동 ===== -->
+<script type="module">
+  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+  const SUPABASE_URL = 'https://tqesmcnqghonlwtvgepn.supabase.co';
+  const SUPABASE_ANON_KEY = 'sb_publishable_dWBhav7Ftp3AaU2dUwj7Yw_lCqVkACS';
+  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  const form = document.getElementById('reserveForm');
+  const success = document.getElementById('formSuccess');
+  const btn = document.getElementById('reserveSubmit');
+  const status = document.getElementById('reserveStatus');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.className = 'form-status';
+    status.textContent = '';
+
+    const data = {
+      name: form.name.value.trim(),
+      phone: form.phone.value.trim(),
+      car: form.car.value.trim(),
+      region: form.region.value.trim(),
+    };
+
+    if (!data.name || !data.phone || !data.car || !data.region) {
+      status.classList.add('err');
+      status.textContent = '모든 항목을 입력해 주세요.';
+      return;
+    }
+
+    btn.disabled = true;
+    const original = btn.textContent;
+    btn.textContent = '접수 중...';
+
+    const { error } = await supabase.from('reservations').insert(data);
+
+    if (error) {
+      btn.disabled = false;
+      btn.textContent = original;
+      status.classList.add('err');
+      status.textContent = '접수에 실패했습니다. 잠시 후 다시 시도하시거나 전화로 연락 주세요.';
+      console.error('Supabase insert error:', error);
+      return;
+    }
+
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 </script>
 </body>
