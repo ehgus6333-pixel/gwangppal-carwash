@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>광빨 출장 세차 | 집 앞이 최고급 디테일링샵이 됩니다</title>
+<meta name="description" content="단 90분, 당신의 집 앞이 최고급 디테일링샵으로. 유럽산 친환경 프리미엄 약품과 디테일링 마스터의 손길로 차량 본연의 광빨을 되찾아 드립니다. 서울/경기 출장 세차." />
+<meta property="og:title" content="광빨 출장 세차 | 집 앞이 최고급 디테일링샵이 됩니다" />
+<meta property="og:description" content="단 90분, 흠집 제로 원칙의 프리미엄 출장 디테일링. 서울/경기 출장 가능." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f5f8ff;
+    --bg-soft-2: #eef3fc;
+    --blue: #2563eb;
+    --blue-bright: #3b82f6;
+    --blue-deep: #1d4ed8;
+    --blue-glow: rgba(37, 99, 235, 0.35);
+    --accent: #2563eb;
+    --ink: #0f172a;
+    --ink-2: #334155;
+    --muted: #64748b;
+    --line: #e6ecf5;
+    --radius: 18px;
+    --maxw: 1120px;
+    --shadow-sm: 0 6px 20px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 16px 44px rgba(15, 23, 42, 0.10);
+    --shadow-blue: 0 18px 40px rgba(37, 99, 235, 0.28);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+  .display { font-family: 'Black Han Sans', 'Noto Sans KR', sans-serif; font-weight: 400; letter-spacing: -0.5px; }
+  .balance { text-wrap: balance; }
+  .nb { white-space: nowrap; }
+  section { position: relative; }
+
+  /* ============ 3D ANIMATED ICON ============ */
+  .icon3d {
+    position: relative;
+    width: 92px; height: 92px;
+    display: grid; place-items: center;
+    border-radius: 26px;
+    font-size: 44px; line-height: 1;
+    background: linear-gradient(160deg, #ffffff 0%, #e8f0ff 100%);
+    box-shadow:
+      0 18px 34px rgba(37, 99, 235, 0.22),
+      inset 0 2px 4px rgba(255, 255, 255, 0.9),
+      inset 0 -6px 12px rgba(37, 99, 235, 0.12);
+    transform-style: preserve-3d;
+    animation: floaty 4.5s ease-in-out infinite;
+  }
+  .icon3d::before {
+    content: "";
+    position: absolute; inset: -18% -12% auto -12%; height: 70%;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, var(--blue-glow), transparent 70%);
+    filter: blur(8px); z-index: -1;
+    opacity: 0.7;
+  }
+  .icon3d > span { display: inline-block; animation: tilt 5s ease-in-out infinite; }
+  .icon3d.delay1 { animation-delay: .6s; }
+  .icon3d.delay2 { animation-delay: 1.2s; }
+  .icon3d.delay1 > span { animation-delay: .6s; }
+  .icon3d.delay2 > span { animation-delay: 1.2s; }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0) rotateX(0deg) rotateZ(0deg); }
+    50%      { transform: translateY(-12px) rotateX(8deg) rotateZ(-3deg); }
+  }
+  @keyframes tilt {
+    0%, 100% { transform: rotate(-6deg) scale(1); }
+    50%      { transform: rotate(6deg) scale(1.08); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .icon3d, .icon3d > span { animation: none; }
+  }
+
+  /* ============ BUTTONS ============ */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    font-weight: 700; font-size: 17px;
+    padding: 18px 32px; border-radius: 100px;
+    text-decoration: none; cursor: pointer; border: none; font-family: inherit;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .btn-primary { background: linear-gradient(135deg, var(--blue), var(--blue-bright)); color: #fff; box-shadow: var(--shadow-blue); }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 24px 50px rgba(37, 99, 235, 0.4); }
+  .btn-ghost { background: #fff; color: var(--blue); border: 1.5px solid var(--line); box-shadow: var(--shadow-sm); }
+  .btn-ghost:hover { border-color: var(--blue); transform: translateY(-3px); }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    padding: 130px 0 90px; overflow: hidden;
+    background:
+      radial-gradient(1100px 560px at 82% -8%, rgba(59,130,246,0.18), transparent 62%),
+      radial-gradient(820px 520px at -6% 108%, rgba(37,99,235,0.12), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(37,99,235,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px);
+    background-size: 58px 58px;
+    -webkit-mask-image: radial-gradient(820px 560px at 78% 18%, #000, transparent 72%);
+    mask-image: radial-gradient(820px 560px at 78% 18%, #000, transparent 72%);
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 2; }
+  .hero-photo {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 58%; z-index: 1;
+    background: url('images/hero.jpg') center right / cover no-repeat;
+    -webkit-mask-image: linear-gradient(to left, #000 34%, transparent 94%), linear-gradient(to bottom, #000 78%, transparent);
+    mask-image: linear-gradient(to left, #000 34%, transparent 94%), linear-gradient(to bottom, #000 78%, transparent);
+    -webkit-mask-composite: source-in; mask-composite: intersect;
+  }
+  .hero .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--blue); font-weight: 700; font-size: 14px; letter-spacing: 1.5px;
+    border: 1px solid rgba(37,99,235,0.25); background: rgba(37,99,235,0.06);
+    padding: 8px 16px; border-radius: 100px; margin-bottom: 28px;
+  }
+  .hero h1 { font-size: clamp(34px, 5.6vw, 60px); line-height: 1.2; margin-bottom: 24px; max-width: 18ch; }
+  .hero h1 .hl { color: var(--blue); }
+  .hero .lead { font-size: clamp(16px, 2.2vw, 21px); color: var(--ink-2); max-width: 56ch; margin-bottom: 14px; }
+  .hero .lead strong { color: var(--ink); }
+  .hero .sub { font-size: clamp(15px, 2vw, 18px); color: var(--muted); max-width: 58ch; margin-bottom: 42px; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .hero-stats { display: flex; gap: 34px; margin-top: 50px; flex-wrap: wrap; }
+  .hero-stats .s b { display: block; font-family: 'Black Han Sans', sans-serif; font-size: 32px; color: var(--blue); line-height: 1; }
+  .hero-stats .s span { font-size: 13px; color: var(--muted); }
+
+  /* ============ SECTION HEADINGS ============ */
+  .sec { padding: 110px 0; }
+  .sec-tag { display: inline-block; font-weight: 700; font-size: 13px; letter-spacing: 3px; color: var(--blue); margin-bottom: 14px; text-transform: uppercase; }
+  .sec-title { font-size: clamp(26px, 4vw, 42px); line-height: 1.3; margin-bottom: 16px; max-width: 24ch; }
+  .sec-title .hl { color: var(--blue); }
+  .sec-desc { color: var(--muted); font-size: 17px; max-width: 60ch; }
+
+  /* ============ PAIN ============ */
+  .pain { background: var(--bg-soft); }
+  .pain-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 52px; }
+  .pain-card {
+    display: flex; gap: 22px; align-items: center;
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 26px 30px; box-shadow: var(--shadow-sm);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .pain-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .pain-card .icon3d { width: 72px; height: 72px; font-size: 34px; border-radius: 20px; flex: 0 0 auto; }
+  .pain-card h3 { font-size: 19px; margin-bottom: 6px; color: var(--ink); }
+  .pain-card p { color: var(--muted); font-size: 15.5px; }
+
+  /* ============ SOLUTION ============ */
+  .solution { background: #fff; }
+  .sol-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 58px; }
+  .sol-card {
+    background: linear-gradient(180deg, #ffffff, #f7faff);
+    border-radius: 22px; padding: 40px 30px 34px;
+    box-shadow: var(--shadow-sm); border: 1px solid var(--line);
+    transition: transform .22s ease, box-shadow .22s ease; position: relative; overflow: hidden;
+  }
+  .sol-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue), var(--blue-bright)); }
+  .sol-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+  .sol-card .icon3d { margin-bottom: 22px; }
+  .sol-num { font-family: 'Black Han Sans', sans-serif; font-size: 13px; color: var(--blue); letter-spacing: 2px; }
+  .sol-card h3 { font-size: 21px; margin: 6px 0 12px; color: var(--ink); line-height: 1.4; }
+  .sol-card p { color: var(--ink-2); font-size: 15px; }
+
+  /* ============ PROOF ============ */
+  .proof { background: var(--bg-soft); }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 56px 0; }
+  .stat { text-align: center; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 34px 18px; box-shadow: var(--shadow-sm); }
+  .stat b { display: block; font-family: 'Black Han Sans', sans-serif; font-size: clamp(28px, 4.6vw, 42px); color: var(--blue); line-height: 1; }
+  .stat .lab { display: block; margin-top: 12px; font-weight: 700; font-size: 15px; color: var(--ink); }
+  .stat .desc { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
+  .quote {
+    margin-top: 16px; background: linear-gradient(135deg, #2563eb, #3b82f6);
+    border-radius: 24px; padding: 46px clamp(26px, 5vw, 58px); position: relative; overflow: hidden;
+    box-shadow: var(--shadow-blue); color: #fff;
+  }
+  .quote::after { content: ""; position: absolute; right: -60px; top: -60px; width: 240px; height: 240px; border-radius: 50%; background: rgba(255,255,255,0.10); }
+  .quote .mark { font-family: 'Black Han Sans', sans-serif; font-size: 72px; color: rgba(255,255,255,0.25); line-height: 0.6; }
+  .quote .big { font-size: clamp(18px, 2.6vw, 25px); font-weight: 700; margin: 4px 0 18px; line-height: 1.5; position: relative; }
+  .quote .big em { font-style: normal; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.5); text-underline-offset: 5px; }
+  .quote p { color: rgba(255,255,255,0.92); font-size: 16px; position: relative; }
+  .quote .by { margin-top: 18px; color: #fff; font-weight: 700; font-size: 14px; letter-spacing: 1px; }
+
+  /* ============ GALLERY ============ */
+  .gallery { background: #fff; }
+  .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
+  .gal-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease; }
+  .gal-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .gal-photo {
+    aspect-ratio: 4/3; position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #eaf1ff, #f5f8ff);
+  }
+  .gal-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+  .gal-card:hover .gal-photo img { transform: scale(1.05); }
+  .gal-body { padding: 22px 22px 26px; }
+  .gal-body h3 { font-size: 17px; margin-bottom: 8px; color: var(--ink); }
+  .gal-body p { color: var(--muted); font-size: 14.5px; }
+  .gallery .note { margin-top: 38px; color: var(--muted); font-size: 14px; text-align: center; }
+
+  /* ============ FAQ ============ */
+  .faq { background: var(--bg-soft); }
+  .faq-list { margin-top: 48px; display: flex; flex-direction: column; gap: 14px; }
+  .faq-item { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .faq-q {
+    width: 100%; text-align: left; background: none; border: none; color: var(--ink); cursor: pointer;
+    padding: 24px 26px; font-size: 17px; font-weight: 700; font-family: inherit;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .faq-q .qmark { color: var(--blue); margin-right: 4px; }
+  .faq-q .chev { flex: 0 0 auto; transition: transform .25s ease; color: var(--blue); font-size: 24px; }
+  .faq-item.open .faq-q .chev { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+  .faq-a-inner { padding: 0 26px 26px; color: var(--ink-2); font-size: 15.5px; }
+
+  /* ============ FORM / CTA ============ */
+  .cta { background: linear-gradient(180deg, #f5f8ff, #eaf1ff); padding-bottom: 120px; }
+  .urgency {
+    background: #fff; border: 1px solid rgba(37,99,235,0.25); border-left: 4px solid var(--blue);
+    border-radius: 16px; padding: 22px 26px; margin-bottom: 44px;
+    display: flex; gap: 16px; align-items: flex-start; box-shadow: var(--shadow-sm);
+  }
+  .urgency .ico { font-size: 26px; }
+  .urgency p { font-size: 15.5px; color: var(--ink-2); }
+  .urgency p strong { color: var(--blue); }
+  .form-card { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: clamp(28px, 5vw, 52px); box-shadow: var(--shadow-md); }
+  .form-card h2 { font-size: clamp(23px, 3.4vw, 33px); margin-bottom: 10px; line-height: 1.3; }
+  .form-card h2 .hl { color: var(--blue); }
+  .form-card .fdesc { color: var(--muted); margin-bottom: 30px; }
+  .field { margin-bottom: 18px; }
+  .field label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--ink-2); }
+  .field label .req { color: var(--blue); }
+  .field input {
+    width: 100%; background: #f8fafd; border: 1.5px solid var(--line); border-radius: 12px;
+    padding: 15px 16px; color: var(--ink); font-size: 16px; font-family: inherit;
+    transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .field input::placeholder { color: #aab4c4; }
+  .field input:focus { outline: none; border-color: var(--blue); background: #fff; box-shadow: 0 0 0 4px rgba(37,99,235,0.12); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .form-submit { margin-top: 12px; }
+  .form-submit .btn { width: 100%; font-size: 18px; padding: 20px; }
+  .form-alt { margin-top: 22px; text-align: center; color: var(--muted); font-size: 14px; }
+  .form-alt a { color: var(--blue); text-decoration: none; font-weight: 700; }
+  .form-success { display: none; text-align: center; padding: 30px 10px; }
+  .form-success.show { display: block; }
+  .form-success .icon3d { margin: 0 auto 18px; }
+  .form-success h3 { font-size: 24px; margin-bottom: 10px; color: var(--blue); }
+  .form-success p { color: var(--ink-2); }
+
+  /* ============ FLOATING CTA ============ */
+  .float-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    background: rgba(255,255,255,0.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    border-top: 1px solid var(--line); padding: 12px 18px; display: none;
+    transform: translateY(110%); transition: transform .3s ease; box-shadow: 0 -8px 24px rgba(15,23,42,0.08);
+  }
+  .float-cta.show { transform: translateY(0); }
+  .float-cta .btn { width: 100%; }
+
+  /* ============ FOOTER ============ */
+  footer { background: #fff; padding: 44px 0; text-align: center; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+  footer .brand { font-family: 'Black Han Sans', sans-serif; color: var(--blue); font-size: 18px; margin-bottom: 8px; }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 900px) {
+    .hero-photo {
+      width: 100%; opacity: 0.22;
+      -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
+      mask-image: linear-gradient(to bottom, #000 60%, transparent);
+    }
+    .sol-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .gal-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .sec { padding: 76px 0; }
+    .hero { padding: 110px 0 76px; }
+    .hero h1 br, .hero .lead br, .hero .sub br, .sec-title br, .sec-desc br { display: none; }
+    .hero h1, .sec-title { text-wrap: balance; }
+    .hero-cta { flex-direction: column; align-items: stretch; }
+    .hero-cta .btn { width: 100%; }
+    .pain-card { flex-direction: column; text-align: center; align-items: center; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { gap: 24px; }
+    .float-cta { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-photo" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow">⚡ PREMIUM MOBILE DETAILING</span>
+    <h1 class="display">바쁜 일과 중 단 90분,<br />저희가 찾아가는 현장이<br /><span class="hl">최고급 디테일링샵</span>이 됩니다.</h1>
+    <p class="lead"><strong>매장에 차를 맡기고 기다릴 시간조차 없는 직장인과 사장님</strong>을 위한<br />프리미엄 솔루션.</p>
+    <p class="sub">유럽산 최고급 친환경 약품과 디테일링 마스터의 집요한 손길로<br />흠집 하나 없이 차량 본연의 압도적인 '광빨'을 되찾아 드립니다.</p>
+    <div class="hero-cta">
+      <a href="#reserve" class="btn btn-primary">단 90분, 출장 세차 예약하기 ➔</a>
+      <a href="#solution" class="btn btn-ghost">서비스 자세히 보기</a>
+    </div>
+    <div class="hero-stats">
+      <div class="s"><b>90분</b><span>평균 케어 완료</span></div>
+      <div class="s"><b>100+</b><span>출장 케어 노하우</span></div>
+      <div class="s"><b>4.8점</b><span>실제 만족도 평점</span></div>
+      <div class="s"><b>하루 3대</b><span>집중 케어 원칙</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAIN ============ -->
+<section class="sec pain">
+  <div class="wrap">
+    <span class="sec-tag">YOUR PAIN</span>
+    <h2 class="sec-title display balance">소중한 차의 세차, 혹시 이런 이유 때문에 미루고 계셨나요?</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="icon3d"><span>⏱️</span></div>
+        <div>
+          <h3>"세차장 다녀올 시간이 도저히 안 납니다"</h3>
+          <p>평일엔 야근과 업무로 바쁘고, 주말에 귀한 시간 내서 멀리 있는 디테일링샵에 차를 맡긴 뒤 하염없이 대기하자니 숨이 턱 막히셨을 겁니다.</p>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="icon3d delay1"><span>🚫</span></div>
+        <div>
+          <h3>"기계식 자동 세차는 흠집 날까 봐 찝찝합니다"</h3>
+          <p>주유소 자동 세차를 돌리자니 소중한 내 차 도장면에 수많은 잔흠집(스월마크)이 생겨 번쩍이던 광택이 다 죽어버릴까 봐 매번 망설여지셨을 겁니다.</p>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="icon3d delay2"><span>🔍</span></div>
+        <div>
+          <h3>"출장 세차는 퀄리티가 떨어질까 봐 못 믿겠습니다"</h3>
+          <p>집 앞까지 찾아오는 편리함은 좋지만, 매장에서 작업하는 손세차만큼 구석구석 유막과 찌든 때를 완벽하게 지워주지 않을까 봐 걱정되셨던 분들.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTION ============ -->
+<section class="sec solution" id="solution">
+  <div class="wrap">
+    <span class="sec-tag">OUR SOLUTION</span>
+    <h2 class="sec-title display">이제 움직이지 마세요.<br /><span class="hl">강남 디테일링샵의 기술력</span>을<br />통째로 배달합니다.</h2>
+    <div class="sol-grid">
+      <div class="sol-card">
+        <div class="icon3d"><span>📦</span></div>
+        <span class="sol-num">01</span>
+        <h3>단 90분 만에 끝나는 타임 세이브 케어</h3>
+        <p>번거로운 차량 이동이나 오랜 대기 없이, 직장에서 서류를 보시거나 집에서 휴식을 취하시는 동안 단 90분 만에 내·외장 프리미엄 세정을 완벽하게 종료합니다. 시간은 극적으로 아끼고 퀄리티는 하이엔드로 유지합니다.</p>
+      </div>
+      <div class="sol-card">
+        <div class="icon3d delay1"><span>🧪</span></div>
+        <span class="sol-num">02</span>
+        <h3>유럽산 프리미엄 친환경 약품 &amp; 흠집 제로 원칙</h3>
+        <p>도장면을 상하게 하는 저가 화학 세제는 절대 사용하지 않습니다. 유럽 직임포트 최고급 친환경 세정 약재와 유막 제거·발수 코팅 전문 약품만으로, 스크래치를 완벽 방어하고 묵은 오염만 안전하게 분리합니다.</p>
+      </div>
+      <div class="sol-card">
+        <div class="icon3d delay2"><span>🌿</span></div>
+        <span class="sol-num">03</span>
+        <h3>호흡기까지 생각한 피톤치드 실내 연막 케어</h3>
+        <p>겉만 대충 닦고 끝나는 일반 세차와 비교를 거부합니다. 내부의 찌든 냄새와 보이지 않는 미세 균까지 케어하기 위해, 실내 세차 마무리 단계에서 피톤치드 연막 케어를 기본 서비스로 아낌없이 제공합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="sec proof">
+  <div class="wrap">
+    <span class="sec-tag">WHY TRUST US</span>
+    <h2 class="sec-title display">도장 관리가 까다로운<br /><span class="nb">외제차·스포츠카</span> 오너들이 먼저<br />인정하고 정착한 이유</h2>
+    <div class="stats-grid">
+      <div class="stat"><b>전문</b><span class="lab">디테일링 매장 운영</span><span class="desc">고급 차량 케어 전문 운영 경력</span></div>
+      <div class="stat"><b>100+</b><span class="lab">출장 노하우</span><span class="desc">현장에서 재현한 베테랑 기술력</span></div>
+      <div class="stat"><b>4.8</b><span class="lab">실제 만족도 평점</span><span class="desc">수입차 오너들의 리얼 리뷰</span></div>
+      <div class="stat"><b>슈퍼카</b><span class="lab">케어 포트폴리오</span><span class="desc">외제차·슈퍼 스포츠카 작업 다수</span></div>
+    </div>
+    <div class="quote">
+      <div class="mark">"</div>
+      <p class="big">수많은 최고급 차량을 직접 만지며 <em>강남에서 디테일링샵</em>을 운영해 왔습니다.</p>
+      <p>공간이 매장에서 고객님의 집 앞이나 회사 주차장으로 바뀌었을 뿐, 제 손끝의 디테일과 약품의 스펙은 절대 타협하지 않습니다. 소중한 자산인 고객님의 차량에 흠집 하나 없이 눈부신 클래스의 '광빨'을 책임지고 올려드리겠습니다.</p>
+      <p class="by">— 광빨 출장 세차 대표 마스터 —</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="sec gallery">
+  <div class="wrap">
+    <span class="sec-tag">REAL GALLERY</span>
+    <h2 class="sec-title display balance">광빨 마스터의 생생한 현장 작업 기록</h2>
+    <p class="sec-desc">🔍 내 차도 이렇게 바뀔 수 있습니다.<br />100% 보정 없는 실제 출장 케어 현장입니다.</p>
+    <div class="gal-grid">
+      <div class="gal-card">
+        <div class="gal-photo"><img src="images/work-1.jpg" alt="프리미엄 스팀 출장 세차 현장" loading="lazy" /></div>
+        <div class="gal-body">
+          <h3>프리미엄 스팀 출장 세차 현장</h3>
+          <p>고객님의 회사·자택 주차장으로 직접 찾아가, 고온 스팀과 전용 약품으로 도장면 손상 없이 묵은 오염을 안전하게 분리해 내는 실제 출장 케어 현장입니다.</p>
+        </div>
+      </div>
+      <div class="gal-card">
+        <div class="gal-photo"><img src="images/work-2.jpg" alt="전문 장비를 갖춘 출장 광빨 세차 차량" loading="lazy" /></div>
+        <div class="gal-body">
+          <h3>전문 장비를 갖춘 출장 세차 차량</h3>
+          <p>스팀 세차·광택·코팅·실내 클리닝까지, 매장급 디테일링 장비를 그대로 싣고 찾아갑니다. 어디서든 매장과 동일한 퀄리티를 현장에서 재현합니다.</p>
+        </div>
+      </div>
+      <div class="gal-card">
+        <div class="gal-photo"><img src="images/work-3.jpg" alt="광빨 출장 세차 대표 마스터" loading="lazy" /></div>
+        <div class="gal-body">
+          <h3>믿고 맡기는 광빨 마스터</h3>
+          <p>강남 디테일링샵을 직접 운영해 온 베테랑 마스터가 처음부터 끝까지 책임지고 케어합니다. 소중한 차량, 흠집 하나 없이 눈부신 광빨로 돌려드립니다.</p>
+        </div>
+      </div>
+    </div>
+    <p class="note">※ 사진 영역에 실제 비포·애프터 고해상도 작업 사진을 등록하면 전환율이 크게 상승합니다.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec faq">
+  <div class="wrap">
+    <span class="sec-tag">FAQ</span>
+    <h2 class="sec-title display">자주 묻는 질문</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q"><span><span class="qmark">Q.</span> 세차 시간이 정확히 얼마나 걸릴까요?</span><span class="chev">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner"><strong>A.</strong> 차량의 크기 및 당일 도장면 오염도에 따라 소폭 상이할 수 있으나, 숙련된 마스터의 집중 케어로 평균 90분 내외면 완벽하게 완료됩니다. 업무나 일상에 방해 없는 완벽한 타임 세이브를 보장합니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span><span class="qmark">Q.</span> 출장이 가능한 지역은 어디까지인가요?</span><span class="chev">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner"><strong>A.</strong> 기본적으로 서울 및 경기권 전 지역 출장이 가능합니다. 다만 포천, 파주, 여주, 인천 등 경기 극외곽 지역의 경우 이동 거리에 따라 소정의 출장비가 소액 발생할 수 있는 점 너른 양해를 부탁드립니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span><span class="qmark">Q.</span> 세차 도중 차량에 흠집이 나거나 미진한 부분이 발견되면 어떡하나요?</span><span class="chev">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner"><strong>A.</strong> 안심하고 맡기셔도 좋습니다. 광빨 출장 세차는 '100% 안심 책임 보장제'를 운영합니다. 완료 후 부족한 부분을 사진 찍어 보내주시면 당일 또는 익일 즉시 재방문하여 무상 A/S를 진행하거나, 확실한 부분 환불 처리를 책임지고 신속하게 이행해 드립니다.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / FORM ============ -->
+<section class="sec cta" id="reserve">
+  <div class="wrap">
+    <div class="urgency">
+      <span class="ico">⚠️</span>
+      <p><strong>캘린더 마감 임박!</strong> 완벽한 하이엔드 퀄리티 유지와 하루 단 3대 집중 케어 원칙을 위해 이번 주 예약 가능한 슬롯이 빠르게 마감되고 있습니다. 늦기 전에 지금 신청해 주세요!</p>
+    </div>
+
+    <div class="form-card">
+      <form id="reserveForm">
+        <h2 class="display">단 90분, 내 차에 <span class="hl">프리미엄 디테일링</span> 출장 세차 예약하기</h2>
+        <p class="fdesc">아래 정보를 남겨주시면 마스터가 직접 빠르게 연락드려 일정을 확정해 드립니다.</p>
+        <div class="form-row">
+          <div class="field">
+            <label>성함 <span class="req">*</span></label>
+            <input type="text" name="name" placeholder="홍길동" required />
+          </div>
+          <div class="field">
+            <label>연락처 <span class="req">*</span></label>
+            <input type="tel" name="phone" placeholder="010-0000-0000" required />
+          </div>
+        </div>
+        <div class="field">
+          <label>차종 및 차량번호 <span class="req">*</span></label>
+          <input type="text" name="car" placeholder="예) BMW 520d / 12가 3456" required />
+        </div>
+        <div class="field">
+          <label>출장 희망 지역 (읍/면/동) <span class="req">*</span></label>
+          <input type="text" name="region" placeholder="예) 서울 강남구 역삼동" required />
+        </div>
+        <div class="field form-submit">
+          <button type="submit" class="btn btn-primary">단 90분, 프리미엄 출장 세차 예약하기 ➔</button>
+        </div>
+        <p class="form-alt">전화 예약을 원하시면 <a href="tel:01000000000">📞 010-0000-0000</a> 으로 연락 주세요.</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="icon3d"><span>✅</span></div>
+        <h3>예약 신청이 접수되었습니다!</h3>
+        <p>입력해 주신 연락처로 마스터가 직접 빠르게 연락드려 일정을 확정해 드리겠습니다. 소중한 차량, 흠집 하나 없이 눈부신 광빨로 책임지겠습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLOATING CTA ============ -->
+<div class="float-cta" id="floatCta">
+  <a href="#reserve" class="btn btn-primary">단 90분, 지금 출장 세차 예약하기 ➔</a>
+</div>
+
+<footer>
+  <div class="brand display">광빨 출장 세차</div>
+  <p>프리미엄 출장 디테일링 · 서울/경기 전 지역 출장 가능</p>
+  <p>© 2026 광빨 출장 세차. All rights reserved.</p>
+</footer>
+
+<script>
+  // FAQ 아코디언
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (other) {
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // 예약 폼 제출
+  var form = document.getElementById('reserveForm');
+  var success = document.getElementById('formSuccess');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = Object.fromEntries(new FormData(form).entries());
+    // TODO: 실제 운영 시 아래에 Supabase/이메일/카카오 알림 연동 코드를 추가하세요.
+    console.log('예약 신청:', data);
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // 모바일 플로팅 CTA: 히어로를 지나면 노출
+  var floatCta = document.getElementById('floatCta');
+  var hero = document.getElementById('top');
+  var reserve = document.getElementById('reserve');
+  window.addEventListener('scroll', function () {
+    var heroBottom = hero.offsetHeight;
+    var reserveTop = reserve.offsetTop;
+    var y = window.scrollY;
+    if (y > heroBottom * 0.7 && y + window.innerHeight < reserveTop + 200) {
+      floatCta.classList.add('show');
+    } else {
+      floatCta.classList.remove('show');
+    }
+  });
+</script>
+</body>
+</html>
